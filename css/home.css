@@ -109,12 +109,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
 }
 
 .blog-section .post {
   margin-bottom: 40px;
 }
 
+
+.blog-section .blog-col-left .img-container {
+  width: 100%;
+}
 
 .blog-section .blog-col-left .post{
   flex-direction: column;
