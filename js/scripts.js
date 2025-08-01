@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-
   // Función reutilizable para configurar un carrusel arrastrable
   function setupDraggableSlider(selector) {
     const slider = document.querySelector(selector);
@@ -25,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       startX = e.pageX - slider.offsetLeft;
       scrollLeft = slider.scrollLeft;
-      
+
       // Inicializar variables de velocidad
       velocity = 0;
       lastX = e.pageX;
@@ -37,12 +36,15 @@ document.addEventListener('DOMContentLoaded', function () {
       slider.classList.remove('active');
 
       // Si estábamos en overscroll, rebotar
-      if (slider.style.transform && slider.style.transform !== 'translateX(0px)') {
+      if (
+        slider.style.transform &&
+        slider.style.transform !== 'translateX(0px)'
+      ) {
         slider.classList.add('snapping');
         slider.style.transform = 'translateX(0)';
         return;
       }
-      
+
       // Iniciar la animación de inercia si la velocidad es significativa
       if (Math.abs(velocity) > 1) {
         frame = requestAnimationFrame(inertiaLoop);
@@ -115,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
     slider.addEventListener('mouseup', stopDragging);
     slider.addEventListener('mouseleave', stopDragging);
     slider.addEventListener('mousemove', onDrag);
-    
+
     // Prevenir el clic en los enlaces después de arrastrar
     // Delegación de eventos para enlaces (soporta elementos agregados dinámicamente)
     slider.addEventListener('click', (e) => {
@@ -128,14 +130,30 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
       }
     });
-    
+
     slider.addEventListener('transitionend', () => {
       slider.classList.remove('snapping');
     });
   }
 
-  // Aplicar la funcionalidad a ambos carruseles
+  // Aplicar la funcionalidad a carruseles
   setupDraggableSlider('.row-estados-chicas');
   setupDraggableSlider('.profile-row-large');
 
+  // Interacción de estrellas en el offcanvas de crear reseña
+  const stars = document.querySelectorAll('#reviewStars button');
+  const ratingInput = document.getElementById('reviewRating');
+  stars.forEach((btn) => {
+    btn.addEventListener('click', function () {
+      const val = parseInt(btn.getAttribute('data-value'));
+      ratingInput.value = val;
+      stars.forEach((b, i) => {
+        if (i < val) {
+          b.querySelector('i').classList.add('text-primary');
+        } else {
+          b.querySelector('i').classList.remove('text-primary');
+        }
+      });
+    });
+  });
 });

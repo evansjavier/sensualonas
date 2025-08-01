@@ -26,6 +26,7 @@
 
   --bs-link-color-rgb: 255, 255, 255;
   --bs-link-hover-color-rgb: 255, 255, 255;
+  --bs-btn-active-border-color: transparent;
 }
 
 @font-face {

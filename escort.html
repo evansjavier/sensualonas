@@ -596,26 +596,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/scripts.js"></script>
 
-  <script>
-    // Interacción de estrellas en el offcanvas de reseña
-    document.addEventListener('DOMContentLoaded', function () {
-      const stars = document.querySelectorAll('#reviewStars button');
-      const ratingInput = document.getElementById('reviewRating');
-      stars.forEach(btn => {
-        btn.addEventListener('click', function () {
-          const val = parseInt(btn.getAttribute('data-value'));
-          ratingInput.value = val;
-          stars.forEach((b, i) => {
-            if (i < val) {
-              b.querySelector('i').classList.add('text-primary');
-            } else {
-              b.querySelector('i').classList.remove('text-primary');
-            }
-          });
-        });
-      });
-    });
-  </script>
 
   <script>
     // Galería Offcanvas
@@ -688,10 +668,8 @@
     }));
   </script>
 
+  <!-- GENERAR DATA FAKE -->
   <script>
-    
-    // GENERAR DATA FAKE
-    
     document.addEventListener('DOMContentLoaded', function () {
       // Datos de ejemplo para otras scorts
       const otherGirls = [
