@@ -1,0 +1,73 @@
+
+body {
+  padding-top: 0;
+}
+.info-header{
+  height: 50px;
+  padding-top: 60px;
+}
+
+
+.story-header-fixed {
+  top: 30px;
+}
+
+.carousel-inner,
+.carousel-item,
+.carousel-item > .position-relative,
+.carousel-item img.story-photo {
+  height: 100vh;
+  min-height: 100vh;
+}
+.story-gradient-top {
+  height: 19%;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.0) 100%);
+}
+.carousel-control-next, .carousel-control-prev{
+  width: 40%; 
+}
+.story-indicators {
+  height: 32px;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+.story-indicator {
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.4);
+  transition: background 0.2s;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.story-indicator.active{
+  background: #fff;
+}
+
+.profile-name {
+  font-size: 18px;
+  line-height: auto;
+}
+
+.story-date {
+  color: rgba(255, 255, 255, 0.8) !important;
+  line-height: auto;
+}
+
+.show-profile {
+  min-width: 70%;
+}
+
+.show-profile:hover {
+  color: #ffffff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-close{
+  --bs-btn-close-opacity: 0.9;
+  --bs-btn-close-hover-opacity: 1
+}

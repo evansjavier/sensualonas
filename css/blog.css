@@ -1,0 +1,34 @@
+body {
+  padding-top: 0;
+}
+
+.nav-underline {
+  --bs-nav-underline-link-active-color: var(--primary);
+}
+
+.nav-underline .nav-link {
+  white-space: nowrap;
+}
+
+
+.nav-underline .nav-link:hover,
+.nav-underline .nav-link:focus {
+  --bs-nav-link-hover-color: var(--primary);
+}
+
+article.bg-dark {
+  background-color: #000000 !important;
+}
+
+article.bg-dark .card-body {
+  --bs-card-color: #DDDDDD;
+}
+
+article.bg-dark .card-img {
+  object-fit: cover;
+  aspect-ratio: 2/1;
+}
+
+article .read-article i{
+  font-size: 12px;
+}

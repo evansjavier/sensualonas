@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Las Escorts Mas Sensuales en Mexico ❤️ Sensualonas</title>
+  <meta name="description" content="Disfruta de Escorts en CDMX, Cuernavaca, DF y Estado de México en Sensualonas. Contactalas y vive un momento lleno de Pasion y Placer.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="preload" href="fonts/urbanistic/Urbanist-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="icons/icomoon/style.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="min-vh-100 d-flex align-items-center justify-content-center bg-dark">
+    <div class="w-100" style="max-width:500px;">
+      <div id="storyCarousel" class="carousel slide h-100 user-select-none" data-bs-ride="carousel" data-bs-interval="5000">
+        <!-- Indicadores arriba -->
+        <div class="story-indicators position-absolute top-0 start-0 w-100 px-3 pt-3 d-flex justify-content-between align-items-center" style="z-index:3;">
+          <div class="d-flex w-100 gap-2">
+            <div type="button" data-bs-target="#storyCarousel" data-bs-slide-to="0" class="story-indicator active flex-grow-1"></div>
+            <div type="button" data-bs-target="#storyCarousel" data-bs-slide-to="1" class="story-indicator flex-grow-1"></div>
+            <div type="button" data-bs-target="#storyCarousel" data-bs-slide-to="2" class="story-indicator flex-grow-1"></div>
+          </div>
+        </div>
+        <!-- Cabecera fija con perfil, nombre y fecha -->
+        <div class="story-header-fixed position-absolute start-0 w-100 px-3 d-flex align-items-center justify-content-between" style="z-index:4; height: 50px;">
+          <div class="d-flex align-items-center gap-2">
+            <img src="img/perfil/marisol.png" alt="Marisol" class="rounded-circle" width="48" height="48">
+            <div class="d-flex flex-column">
+              <span class="fw-bold text-white profile-name ls-tight d-flex align-items-center gap-2">Marisol <i class="icon-verified text-primary"></i></span>
+              <span id="story-date" class="text-white-80 story-date ls-tight"></span>
+            </div>
+          </div>
+          <button type="button" class="btn-close btn-close-white ms-auto align-self-end" aria-label="Cerrar" onclick="window.history.back()"></button>
+        </div>
+        <!-- Botón Ver perfil fijo sobre la foto -->
+        <div class="position-absolute bottom-0 start-0 w-100 pb-4 d-flex justify-content-center" style="z-index:4;">
+          <a href="escort.html" class="show-profile btn btn-outline-light rounded-4 px-4">Ver perfil</a>
+        </div>
+        <div class="carousel-inner" style="height: 100vh;">
+          <div class="carousel-item active h-100" data-story-date="Jue 4, 8:46 pm">
+            <div class="position-relative h-100">
+              <div class="story-gradient-top position-absolute top-0 start-0 w-100"></div>
+              <img src="img/galeria/marisol/xl/foto-1.jpg" class="story-photo d-block w-100 h-100 object-fit-cover" alt="Historia Marisol 1">
+            </div>
+          </div>
+          <div class="carousel-item h-100" data-story-date="Jue 4, 8:40 pm">
+            <div class="position-relative h-100">
+              <div class="story-gradient-top position-absolute top-0 start-0 w-100"></div>
+              <img src="img/galeria/marisol/xl/foto-2.jpg" class="story-photo d-block w-100 h-100 object-fit-cover" alt="Historia Marisol 2">
+            </div>
+          </div>
+          <div class="carousel-item h-100" data-story-date="Jue 4, 7:00 pm">
+            <div class="position-relative h-100">
+              <div class="story-gradient-top position-absolute top-0 start-0 w-100"></div>
+              <img src="img/galeria/marisol/sm/foto-3.jpg" class="story-photo d-block w-100 h-100 object-fit-cover" alt="Historia Marisol 3">
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#storyCarousel" data-bs-slide="prev">
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#storyCarousel" data-bs-slide="next">
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <link rel="stylesheet" href="css/story.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script>
+    // Sincroniza los indicadores con el slide activo y la fecha fija
+    document.addEventListener('DOMContentLoaded', function () {
+      var carousel = document.getElementById('storyCarousel');
+      var indicators = document.querySelectorAll('.story-indicator');
+      var dateSpan = document.getElementById('story-date');
+      function updateDate() {
+        var activeItem = carousel.querySelector('.carousel-item.active');
+        if (activeItem && dateSpan) {
+          dateSpan.textContent = activeItem.getAttribute('data-story-date') || '';
+        }
+      }
+      if (carousel && indicators.length) {
+        carousel.addEventListener('slide.bs.carousel', function (e) {
+          indicators.forEach((el, idx) => {
+            el.classList.toggle('active', idx === e.to);
+          });
+        });
+        carousel.addEventListener('slid.bs.carousel', updateDate);
+        // Click en indicador
+        indicators.forEach((el, idx) => {
+          el.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var bsCarousel = bootstrap.Carousel.getOrCreateInstance(carousel);
+            bsCarousel.to(idx);
+          });
+        });
+        // Inicializa la fecha al cargar
+        updateDate();
+      }
+    });
+  </script>
+</body>
+
+</html>

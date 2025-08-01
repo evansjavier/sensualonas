@@ -1,0 +1,11 @@
+body {
+  padding-top: 0;
+}
+.footer-main{
+  padding-bottom: 8.5em !important;
+}
+@media (min-width: 1200px) {
+  .footer-main {
+    padding-bottom: unset !important;
+  }
+}
