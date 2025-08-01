@@ -118,10 +118,10 @@
 
         <a href="story.html" class="d-flex flex-column align-items-center estado-card text-decoration-none">
           <div class="rounded-3 overflow-hidden w-100 img-estado-container">
-            <img src="img/estados/marisol.png" alt="Alexa" class="img-fluid w-100 h-100 object-fit-cover">
+            <img src="img/estados/marisol.png" class="img-fluid w-100 h-100 object-fit-cover">
           </div>
           <div class="rounded-circle overflow-hidden position-relative img-perfil-container">
-            <img src="img/perfil/marisol.png" alt="Alexa" class="img-fluid w-100 h-100 object-fit-cover">
+            <img src="img/perfil/marisol.png" class="img-fluid w-100 h-100 object-fit-cover">
           </div>
           <h3 class="mt-2 text-center text-white h6 fw-normal">Alexa</h3>
         </a>
@@ -374,11 +374,7 @@
           // Cambia el nombre
           const nameElement = newCard.querySelector('h3');
           if (nameElement) nameElement.textContent = name;
-          // Cambia los alt de las imágenes
-          const imgElement = newCard.querySelector('.img-estado-container img');
-          const perfilImgElement = newCard.querySelector('.img-perfil-container img');
-          if (imgElement) imgElement.alt = name;
-          if (perfilImgElement) perfilImgElement.alt = name;
+          
           container.appendChild(newCard);
         });
       }
