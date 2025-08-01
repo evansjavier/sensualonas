@@ -1,3 +1,5 @@
+/* Generales */
+
 body {
   padding-top: 0;
 }
@@ -8,4 +10,259 @@ body {
   .footer-main {
     padding-bottom: unset !important;
   }
+}
+
+/* =====================
+  PÁGINA: PERFIL ESCORT
+*/
+.profile-container {
+  position: relative;
+  overflow: hidden;
+}
+.profile-container .bg-blur-img {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.profile-container .bg-blur-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(16px) brightness(0.3);
+  position: absolute;
+  inset: 0;
+}
+
+.profile-container .profile-img {
+  width: 111px;
+  height: 111px;
+}
+
+.profile-container .main-info{
+  padding-left: 16px;
+}
+
+.profile-container .main-info .icon-star{
+  font-size: 20px;
+}
+
+.profile-container .main-info .profile-name {
+  font-size: 18px;
+}
+
+.profile-container .main-info .stars-average,
+.profile-container .main-info .age{
+  font-size: 16px; 
+}
+
+.profile-container .statistics{
+  max-width: 80%;
+  margin: auto;
+}
+.profile-container .statistics .col {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.profile-container .statistics .stat-number {
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.profile-container .statistics .stat-label {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* Galería tipo Instagram */
+.profile-container .profile-gallery {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.profile-container .gallery-img-wrapper {
+  aspect-ratio: 3/4;
+  background: #222;
+  cursor: pointer;
+}
+ 
+.profile-container .plyr--full-ui{
+  width: 227px;
+}
+
+.profile-container .plyr__volume input[type=range]{
+  display: none;
+}
+
+.profile-container .info-section dt,
+.profile-container .info-section dd{
+  display: inline;
+}
+
+.profile-container .info-section dt{
+  font-weight: normal;
+}
+
+.profile-container .about-me{
+  font-size: 18px;
+}
+
+.profile-container .rating-section .progress{
+  
+  flex-grow: 1;
+  height: 4px;
+}
+
+.profile-container .rating-section .icon-star{
+  font-size: 15px;
+}
+
+
+.profile-container .rating-section .starts-label{
+  width: 27px;  
+}
+
+.profile-container .rating-section .perc-number{
+  width: 24px;
+}
+
+.profile-container .others-scorts {
+  margin-right: -0.75rem;
+}
+
+/* Offcanvas galería fullscreen */
+.profile-container .offcanvas-gallery {
+  --bs-offcanvas-width: 100vw;
+  --bs-offcanvas-bg: var(--black);
+}
+
+.profile-container .offcanvas-gallery .gallery-main-img {
+  max-width: 100%;
+  max-height: calc(100vh - 242px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+.profile-container .offcanvas-gallery .gallery-counter {
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+.profile-container .offcanvas-gallery .report-photo-btn{
+  --bs-btn-border-color: transparent;
+}
+
+.profile-container .offcanvas-gallery .report-photo-btn i {
+  font-size: 18px;
+}
+
+.profile-container .offcanvas-gallery .btn-link {
+  text-decoration: none;
+}
+
+.profile-container .offcanvas-gallery .breadcrumbs-navbar {
+  background: transparent;
+  box-shadow: none;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+@media (min-width: 768px) {  
+  .profile-story-link{
+    position: relative;
+    left: 18px;
+  }
+
+  .profile-container .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-container .main-info{
+    padding-left: 32px;
+  }
+  
+  .profile-container .main-info .profile-name {
+    font-size: 24px;
+  }
+  .profile-container .main-info .stars-average,
+  .profile-container .main-info .age {
+    font-size: 20px;
+  }
+  .profile-container .statistics{
+    max-width: 328px;
+  }
+  
+  .profile-container .statistics .stat-number {
+    font-size: 24px;
+  }
+  
+  .profile-container .statistics .stat-label {
+    font-size: 16px;
+  }
+  
+  .profile-container .profile-gallery {
+    margin-left: inherit;
+    margin-right: inherit;
+  }
+
+  
+  .profile-container .plyr--full-ui{
+    width: 350px;
+  }
+  
+  .profile-container .about-me{
+    font-size: 24px;
+  }
+
+  .profile-container .offcanvas-gallery .gallery-main-img {
+    max-width: 80%;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+
+  .profile-container .statistics{
+    max-width: 380px;
+  }
+  
+  .profile-container .statistics .stat-number {
+    font-size: 48px;
+  }
+  .profile-container .plyr__volume input[type=range]{
+    display: inline;
+  }
+  
+  .profile-container .highlighted-features {
+    max-width: 400px;
+  }
+  
+  .profile-container .offcanvas-gallery .gallery-main-img {
+    max-height: calc(100vh - 170px);
+  }
+  .profile-container .offcanvas-gallery .col-report{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+}
+
+
+/** =====================
+   COMPONENTES: PLYR (REPRODUCTOR AUDIO)
+====================== */
+.plyr--audio .plyr__controls{
+    --plyr-color-main: var(--primary);
+    --plyr-audio-controls-background: var(--dark-background-secondary);
+    --plyr-audio-control-color: #fff;
+    --plyr-control-radius: 50px;
+    --plyr-control-icon-size: 14px;
+    --plyr-control-spacing: 12px;
+    border-radius: 30px !important;
+    margin-top: 16px;
+}
+
+.plyr--audio .plyr__controls .plyr__controls__item:first-child {
+  background: var(--primary);
 }

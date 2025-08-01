@@ -1,0 +1,27 @@
+/* =====================
+   COMPONENTES: FILTRO BUSCADOR MODELOS
+====================== */
+
+#offcanvasFiltros {
+  --bs-offcanvas-width: 100%;
+  --bs-offcanvas-bg: var(--black);
+  --bs-breadcrumb-font-size: 18px;
+}
+
+@media (min-width: 1200px) {
+  #offcanvasFiltros {
+    --bs-offcanvas-width: 60vw;
+  }
+  #offcanvasFiltros nav{
+    display: none;
+  }
+    
+  #offcanvasFiltros .offcanvas-header {
+    box-shadow: none;
+  }
+  
+  #offcanvasFiltros .btn-close{
+    --bs-btn-close-opacity: 0.9;
+    --bs-btn-close-hover-opacity: 1;
+  }
+}
